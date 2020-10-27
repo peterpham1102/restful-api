@@ -18,7 +18,7 @@ public interface CategoryService {
 
     CategoryDTO saveCategoryByDTO(Long id, CategoryDTO categoryDTO);
 
-    CategoryDTO updateCategory(Long id, CategoryDTO categoryDTO);
+//    CategoryDTO updateCategory(Long id, CategoryDTO categoryDTO);
 
     CategoryDTO patchCategory(Long id, CategoryDTO categoryDTO);
 
