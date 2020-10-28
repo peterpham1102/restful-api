@@ -1,12 +1,10 @@
 package com.peterpham.restfulapi.services;
 
 import com.peterpham.restfulapi.api.v1.mapper.CategoryMapper;
-import com.peterpham.restfulapi.api.v1.mapper.CategoryMapperImpl;
 import com.peterpham.restfulapi.api.v1.model.CategoryDTO;
 import com.peterpham.restfulapi.controllers.v1.CategoryController;
 import com.peterpham.restfulapi.domain.Category;
 import com.peterpham.restfulapi.repositories.CategoryRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,8 +16,8 @@ public class CategoryServiceImpl implements CategoryService {
     private final CategoryMapper categoryMapper;
     private final CategoryRepository categoryRepository;
 
-    public CategoryServiceImpl(CategoryRepository categoryRepository) {
-        this.categoryMapper = new CategoryMapperImpl();
+    public CategoryServiceImpl( CategoryMapper categoryMapper ,CategoryRepository categoryRepository) {
+        this.categoryMapper = categoryMapper;
         this.categoryRepository = categoryRepository;
     }
 
